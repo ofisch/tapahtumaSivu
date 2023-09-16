@@ -5,41 +5,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="/dist/output.css" rel="stylesheet">
 </head>
-<body>
+<body class="bg-gunmetal">
     <div class="flex flex-col">
-  <nav class="py-5 bg-gunmetal">
+  <nav class="flex flex-row py-5 border-b bg-gunmetal">
     <button class="mx-4 scale-150 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-175 duration-150">≡</button>
+    <h1 class="text-white">tapahtumasivu</h1>
   </nav>
   <div class="flex flex-col">
-  <div class="flex flex-col lg:flex-row lg:h-96 w-100 mx-3 mt-3 bg-blue">
+  <header class="flex flex-col lg:flex-row lg:h-96 w-100 mx-3 mt-3 border rounded-md overflow-hidden">
     <div class="flex-auto bg-[url('/img/banneriKuva.jpg')] bg-cover">
         <div class="flex h-60 justify-center items-center">
-            <div class="text-center bg-gunmetal">
-                <h1>SLOGAN</h1>
+            <div class="text-center">
+                <h2 class="text-lg">SLOGAN</h2>
             </div>
         </div>
     </div>
     <div class="flex h-24 lg:w-1/4 lg:h-auto bg-tangerine justify-center items-center">
-        <button class="text-center transition ease-in-out delay-150 bg-blue hover:-translate-y-1 hover:scale-110 hover:opacity-75 duration-150">striimiin</button>
+        <button class="text-center transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:opacity-75 duration-150">striimiin</button>
     </div>
-    </div>
-  <div class="flex flex-col w-100 mx-3 mt-3 bg-blue">
+    </header>
+  <div class="flex flex-col w-100 mx-3 mt-3 border rounded-md overflow-hidden">
     <div class="flex-auto px-8 bg-gradient-to-r from-cyan-500 to-blue-500">
         <div class="h-60 justify-center items-center text-center mx-3 my-3 bg-gunmetal">
             <p class="p-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores commodi repellendus minima itaque optio inventore. Quidem quae libero ab nemo, hic nam ex voluptatem dolores temporibus, facere recusandae dignissimos alias.</p>
         </div>
     </div>
     <div class="flex h-24 bg-tangerine justify-center items-center">
-      <button class="text-center transition ease-in-out delay-150 bg-blue hover:-translate-y-1 hover:scale-110 hover:opacity-75 duration-150">striimiin</button>
+      <button class="text-center transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:opacity-75 duration-150">striimiin</button>
   </div>
 </div>
-<div class="flex flex-col w-100 mx-3 my-3 bg-blue">
+<footer class="flex flex-col w-100 mx-3 my-3 border">
       <div class="flex h-20 justify-center items-center">
           <div class="text-center bg-gunmetal">
               <h1>footer</h1>
           </div>
       </div>
-  </div>
+  </footer>
 </div>
 </body>
 </html>
