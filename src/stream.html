@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="/dist/output.css" rel="stylesheet" />
+    <link href="https://vjs.zencdn.net/8.5.2/video-js.css" rel="stylesheet" />
     <title>striimi</title>
   </head>
   <body class="bg-gunmetal">
@@ -26,9 +27,24 @@
           <div class="flex-auto bg-[url('/img/banneriKuva.jpg')] bg-cover">
             <div class="flex justify-center items-center">
               <video
-                src="../video/pilari.mp4"
+                id="my-video"
+                controls
+                preload="auto"
+                poster="../img/banneriKuva.jpg"
+                data-setup="{}"
                 class="w-full aspect-video"
-              ></video>
+              >
+                <source src="../video/pilari.mp4" type="video/mp4" />
+                <p class="vjs-no-js">
+                  To view this video please enable JavaScript, and consider
+                  upgrading to a web browser that
+                  <a
+                    href="https://videojs.com/html5-video-support/"
+                    target="_blank"
+                    >supports HTML5 video</a
+                  >
+                </p>
+              </video>
             </div>
           </div>
         </main>
