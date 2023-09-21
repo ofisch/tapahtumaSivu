@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/dist/output.css" rel="stylesheet" />
+    <title>striimi</title>
+  </head>
+  <body class="bg-gunmetal">
+    <div class="flex flex-col bg-gunmetal">
+      <nav class="flex flex-row py-5 border-b bg-gunmetal">
+        <button
+          class="mx-4 scale-150 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-175 duration-150"
+        >
+          ≡
+        </button>
+        <h2 class="text-white">tapahtumasivu</h2>
+      </nav>
+      <div class="flex flex-col mx-3">
+        <header class="w-100 mt-3 border bg-tangerine">
+          <h1 class="mx-3 text-2xl">striimin otsikko</h1>
+        </header>
+        <main
+          class="flex flex-col lg:flex-row lg:h-96 w-100 mt-3 border rounded-md overflow-hidden"
+        >
+          <div class="flex-auto bg-[url('/img/banneriKuva.jpg')] bg-cover">
+            <div class="flex justify-center items-center">
+              <video
+                src="../video/pilari.mp4"
+                class="w-full aspect-video"
+              ></video>
+            </div>
+          </div>
+        </main>
+        <div class="flex flex-col w-100 mt-3 border rounded-md overflow-hidden">
+          <div
+            id="chat"
+            class="flex h-auto my-3 px-8 bg-gunmetal items-center lg:justify-center"
+          >
+            <ul id="messages">
+              <li class="hover:bg-tangerine w-fit">moi täs chat-viesti</li>
+              <li class="hover:bg-tangerine w-fit">hyvä striimi</li>
+              <li class="hover:bg-tangerine w-fit">wou</li>
+              <li class="hover:bg-tangerine w-fit">vähäx siistii</li>
+              <li class="hover:bg-tangerine w-fit">testi123</li>
+              <li class="hover:bg-tangerine w-fit">
+                Lorem ipsum dolor sit, amet consectetur adipisi
+              </li>
+              <li class="hover:bg-tangerine w-fit">
+                Lorem ipsum dolor sit, amet consectetur adipisi
+              </li>
+            </ul>
+          </div>
+          <div
+            class="flex h-24 px-8 bg-tangerine items-center lg:justify-center"
+          >
+            <form action="">
+              <input class="bg-tangerine" placeholder="chat" />
+              <button>✅</button>
+            </form>
+          </div>
+        </div>
+        <footer class="flex flex-col w-100 my-3 border">
+          <div class="flex h-20 items-center lg:justify-center">
+            <div class="bg-gunmetal px-3">
+              <p>
+                infoa striimistä - Lorem ipsum dolor sit, amet consectetur
+                adipisicing elit.
+              </p>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>
