@@ -3,15 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <base href="/" />
+    <link rel="stylesheet" href="styles.css" />
+
     <link href="/dist/output.css" rel="stylesheet" />
     <link href="https://vjs.zencdn.net/8.5.2/video-js.css" rel="stylesheet" />
     <script src="https://vjs.zencdn.net/8.5.2/video.min.js" defer></script>
+    <script src="/socket.io/socket.io.js"></script>
     <link
       href="https://unpkg.com/video.js@7/dist/video-js.min.css"
       rel="stylesheet"
     />
-    <link href="../utils/videoplayer.css" rel="stylesheet" />
-    <script src="main.js" defer></script>
+    <link href="utils\videoplayer.css" rel="stylesheet" />
+    <script src="/src/main.js" defer></script>
+    <script src="/index.js" defer></script>
+    <script src="chat.js" defer></script>
     <title>striimi</title>
   </head>
   <body class="bg-gunmetal">
@@ -61,7 +67,7 @@
             class="flex h-auto my-3 px-8 bg-gunmetal items-center lg:justify-center overflow-hidden"
           >
             <ul id="messages">
-              <li class="hover:bg-tangerine w-fit">moi täs chat-viesti</li>
+              <!---  <li class="hover:bg-tangerine w-fit">moi täs chat-viesti</li>
               <li class="hover:bg-tangerine w-fit">hyvä striimi</li>
               <li class="hover:bg-tangerine w-fit">wou</li>
               <li class="hover:bg-tangerine w-fit">vähäx siistii</li>
@@ -71,18 +77,19 @@
               </li>
               <li class="hover:bg-tangerine w-fit">
                 Lorem ipsum dolor sit, amet consectetur adipisi
-              </li>
+              </li> -->
             </ul>
           </div>
           <div
             class="flex h-24 px-8 bg-tangerine items-center lg:justify-center"
           >
-            <form action="">
+            <form type="text" id="m">
               <input
                 class="bg-tangerine transition ease-in-out delay-70 hover:-translate-y-1 hover:scale-110 hover:opacity-75 duration-70"
                 placeholder="chat"
               />
               <button
+                type="submit"
                 class="transition ease-in-out delay-70 hover:-translate-y-1 hover:scale-110 hover:opacity-75 duration-70"
               >
                 ✅
