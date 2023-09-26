@@ -1,5 +1,6 @@
 "use strict";
 
+const exp = require("constants");
 const express = require("express");
 const app = express();
 const http = require("http").createServer(app);
@@ -9,29 +10,6 @@ const path = require("path");
 
 //og:
 app.use(express.static("public"));
-
-//testi:
-/*
-app.use(
-  express.static(path.join(__dirname, "public"), {
-    setHeaders: (res, filePath) => {
-      if (filePath.endsWith(".css")) {
-        res.setHeader("Content-Type", "text/css");
-      }
-    },
-  })
-);
-*/
-
-/*
-app.get("/", (req, res) => {
-  res.sendFile(__dirname + "/index.html");
-});
-
-app.get("/stream", (req, res) => {
-  res.sendFile(__dirname + "/stream.html");
-});
-*/
 
 io.on("connection", (socket) => {
   console.log("a user connected", socket.id);

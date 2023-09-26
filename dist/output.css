@@ -562,8 +562,16 @@ html {
   margin-top: 0.75rem;
 }
 
+.block {
+  display: block;
+}
+
 .flex {
   display: flex;
+}
+
+.hidden {
+  display: none;
 }
 
 .aspect-video {
@@ -651,8 +659,8 @@ html {
   background-image: url('/img/banneriKuva.jpg');
 }
 
-.bg-\[url\(\'img\\banneriKuva\.jpg\'\)\] {
-  background-image: url('img\banneriKuva.jpg');
+.bg-\[url\(\'img\/banneriKuva\.jpg\'\)\] {
+  background-image: url('img/banneriKuva.jpg');
 }
 
 .bg-cover {
