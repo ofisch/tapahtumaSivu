@@ -52,8 +52,7 @@ joinForm.addEventListener("submit", (event) => {
 socket.on("chat message", (msg) => {
   const date = new Date();
   const item = document.createElement("li");
-  //item.innerText = date.timeNow() + " " + nickname + ": " + msg;
-  item.innerText = nickname + ": " + msg;
+  item.innerText = msg;
   item.classList.add("hover:bg-tangerine");
   item.classList.add("w-fit");
 
