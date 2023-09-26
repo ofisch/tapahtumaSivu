@@ -11,18 +11,37 @@ const joinForm = document.getElementById("join-form");
 const usernameInput = joinForm.getElementsByTagName("input")[0];
 msgForm.style.display = "none";
 
+let nickname;
+
+Date.prototype.timeNow = function () {
+  return (
+    (this.getHours() < 10 ? "0" : "") +
+    this.getHours() +
+    ":" +
+    (this.getMinutes() < 10 ? "0" : "") +
+    this.getMinutes()
+  );
+};
+
+function isEmptyOrSpaces(str) {
+  return str === null || str.match(/^ *$/) !== null;
+}
+
 msgForm.addEventListener("submit", (event) => {
   event.preventDefault();
   const inp = document.getElementById("m");
-  console.log("testi");
-  socket.emit("chat message", inp.value);
-  inp.value = "";
+  if (!isEmptyOrSpaces(inp.value)) {
+    console.log("testi");
+    socket.emit("chat message", inp.value);
+    inp.value = "";
+  }
 });
 
 joinForm.addEventListener("submit", (event) => {
   event.preventDefault();
   if (usernameInput.value) {
     socket.emit("join", usernameInput.value);
+    nickname = usernameInput.value;
     usernameInput.value = "";
     document.getElementById("login").style.display = "none";
     msgForm.style.display = "block";
@@ -31,8 +50,10 @@ joinForm.addEventListener("submit", (event) => {
 });
 
 socket.on("chat message", (msg) => {
+  const date = new Date();
   const item = document.createElement("li");
-  item.innerText = msg;
+  //item.innerText = date.timeNow() + " " + nickname + ": " + msg;
+  item.innerText = nickname + ": " + msg;
   item.classList.add("hover:bg-tangerine");
   item.classList.add("w-fit");
 

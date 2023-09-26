@@ -11,8 +11,22 @@ const path = require("path");
 //og:
 app.use(express.static("public"));
 
+const users = [];
+
 io.on("connection", (socket) => {
   console.log("a user connected", socket.id);
+
+  socket.on("join", (nickname) => {
+    socket.nickname = nickname;
+    console.log("nick: ", nickname);
+
+    const user = {
+      nickname: nickname,
+      id: socket.id,
+    };
+
+    users.push(user);
+  });
 
   socket.on("disconnect", () => {
     console.log("a user disconnected", socket.id);
