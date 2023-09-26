@@ -8,12 +8,18 @@
   <link href="/dist/output.css" rel="stylesheet">
   <title>tapahtumasivu</title>
 </head>
-<body class="bg-gunmetal">
+<body class="bg-gunmetal font-body font-light">
     <div class="flex flex-col bg-gunmetal">
   <nav class="flex flex-row py-5 border-b bg-gunmetal">
-    <button class="mx-4 scale-150 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-175 duration-150">≡</button>
+    <button id="burger-button" class="mx-4 scale-150 transition ease-in-out delay-70 hover:-translate-y-1 hover:scale-175 duration-70">≡</button>
     <h1 class="text-white">tapahtumasivu</h1>
   </nav>
+  <div id="menu" style="display: none" class="flex flex-col py-5 border-b bg-gunmetal">
+    <div class="flex flex-col mx-4 gap-5">
+      <h3 class="text-white"><a href="index.html">etusivu</a></h3>
+      <h4 ><a href="stream.html">striimi</a></h4>
+    </div>
+  </div>
   <div class="flex flex-col">
   <header class="flex flex-col lg:flex-row lg:h-96 w-100 mx-3 mt-3 border rounded-md overflow-hidden">
     <div class="flex-auto bg-[url('img/banneriKuva.jpg')] bg-cover">
@@ -46,4 +52,15 @@
   </footer>
 </div>
 </body>
+<script>
+  const burgerButton = document.getElementById("burger-button");
+  const menu = document.getElementById("menu");
+  burgerButton.addEventListener("click", function () {
+    if (menu.style.display === "none") {
+      menu.style.display = "block";
+    } else {
+      menu.style.display = "none";
+    }
+  });
+</script>
 </html>

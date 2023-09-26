@@ -18,16 +18,31 @@
     <script src="chat.js" defer></script>
     <title>striimi</title>
   </head>
-  <body class="bg-gunmetal">
+  <body class="bg-gunmetal font-body font-light">
     <div class="flex flex-col bg-gunmetal">
       <nav class="flex flex-row py-5 border-b bg-gunmetal">
         <button
+          id="burger-button"
           class="mx-4 scale-150 transition ease-in-out delay-70 hover:-translate-y-1 hover:scale-175 duration-70"
         >
           ≡
         </button>
         <h2 class="text-white">tapahtumasivu</h2>
       </nav>
+      <div
+        id="menu"
+        style="display: none"
+        class="flex flex-col py-5 border-b bg-gunmetal"
+      >
+        <div class="flex flex-col mx-4 gap-5">
+          <h3 class="text-white">
+            <a href="index.html">etusivu</a>
+          </h3>
+          <h4>
+            <a href="stream.html">striimi</a>
+          </h4>
+        </div>
+      </div>
       <div class="flex flex-col mx-3">
         <header class="w-100 mt-3 border bg-tangerine">
           <h1 class="mx-3 text-2xl">striimin otsikko</h1>
@@ -66,7 +81,7 @@
         <div class="flex flex-col w-100 mt-3 border rounded-md overflow-hidden">
           <div
             id="chat"
-            class="flex h-36 my-3 px-8 bg-gunmetal items-center lg:justify-center overflow-y-scroll"
+            class="flex h-44 my-3 px-8 bg-gunmetal items-center lg:justify-center overflow-y-scroll"
           >
             <ul id="messages" class="h-full overflow-y-auto"></ul>
           </div>
@@ -75,15 +90,26 @@
           >
             <section id="login">
               <form id="join-form">
-                <input type="text" id="username" />
-                <button type="submit">Liity</button>
+                <input
+                  type="text"
+                  id="username"
+                  class="bg-tangerine border rounded-md p-1 transition ease-in-out delay-70 hover:-translate-y-1 hover:scale-110 hover:opacity-75 duration-70"
+                  placeholder="nimimerkki"
+                />
+                <button
+                  type="submit"
+                  class="transition ease-in-out delay-70 hover:-translate-y-1 hover:scale-110 hover:opacity-75 duration-70"
+                >
+                  Liity
+                </button>
               </form>
             </section>
 
             <form type="text" id="input-form">
               <input
                 id="m"
-                class="bg-tangerine transition ease-in-out delay-70 hover:-translate-y-1 hover:scale-110 hover:opacity-75 duration-70"
+                spellcheck="false"
+                class="bg-tangerine border rounded-md p-1 transition ease-in-out delay-70 hover:-translate-y-1 hover:scale-110 hover:opacity-75 duration-70"
                 placeholder="chat"
               />
               <button
@@ -108,4 +134,16 @@
       </div>
     </div>
   </body>
+  <script>
+    const burgerButton = document.getElementById("burger-button");
+    const menu = document.getElementById("menu");
+
+    burgerButton.addEventListener("click", function () {
+      if (menu.style.display === "none") {
+        menu.style.display = "block";
+      } else {
+        menu.style.display = "none";
+      }
+    });
+  </script>
 </html>

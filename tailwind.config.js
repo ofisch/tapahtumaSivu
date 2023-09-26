@@ -28,6 +28,9 @@ module.exports = {
     backgroundImage: {
       banner: "url('/img/banneriKuva.jpg')",
     },
+    fontFamily: {
+      body: ["Merriweather Sans"],
+    },
   },
   plugins: [],
 };
