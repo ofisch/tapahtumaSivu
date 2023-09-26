@@ -45,7 +45,11 @@
                 data-setup="{}"
                 class="video-js vjs-16-9 vjs-theme-sea w-full aspect-video"
               >
-                <source src="../video/pilari.mp4" type="video/mp4" />
+                <source
+                  src="https://75ef2e1cdb7f.entrypoint.cloud.wowza.com/app-021t9h44/ngrp:e93671c3_all/playlist.m3u8"
+                  type="application/x-mpegURL"
+                />
+                <source type="video/mp4" />
                 <p class="vjs-no-js">
                   To view this video please enable JavaScript, and consider
                   upgrading to a web browser that
@@ -62,9 +66,9 @@
         <div class="flex flex-col w-100 mt-3 border rounded-md overflow-hidden">
           <div
             id="chat"
-            class="flex h-auto my-3 px-8 bg-gunmetal items-center lg:justify-center overflow-hidden"
+            class="flex h-36 my-3 px-8 bg-gunmetal items-center lg:justify-center overflow-y-scroll"
           >
-            <ul id="messages"></ul>
+            <ul id="messages" class="h-full overflow-y-auto"></ul>
           </div>
           <div
             class="flex h-24 px-8 bg-tangerine items-center lg:justify-center"

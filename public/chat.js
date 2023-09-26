@@ -57,4 +57,5 @@ socket.on("chat message", (msg) => {
   item.classList.add("w-fit");
 
   document.getElementById("messages").appendChild(item);
+  document.getElementById("messages").scrollTo(0, messages.scrollHeight);
 });

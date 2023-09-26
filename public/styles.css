@@ -507,6 +507,9 @@ video {
 .mt-3 {
   margin-top: 0.75rem;
 }
+.block {
+  display: block;
+}
 .flex {
   display: flex;
 }
@@ -519,11 +522,14 @@ video {
 .h-24 {
   height: 6rem;
 }
+.h-36 {
+  height: 9rem;
+}
 .h-60 {
   height: 15rem;
 }
-.h-auto {
-  height: auto;
+.h-full {
+  height: 100%;
 }
 .w-fit {
   width: -moz-fit-content;
@@ -554,6 +560,12 @@ video {
 }
 .overflow-hidden {
   overflow: hidden;
+}
+.overflow-y-auto {
+  overflow-y: auto;
+}
+.overflow-y-scroll {
+  overflow-y: scroll;
 }
 .rounded-md {
   border-radius: 0.375rem;

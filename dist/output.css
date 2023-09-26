@@ -570,10 +570,6 @@ html {
   display: flex;
 }
 
-.hidden {
-  display: none;
-}
-
 .aspect-video {
   aspect-ratio: 16 / 9;
 }
@@ -590,8 +586,12 @@ html {
   height: 15rem;
 }
 
-.h-auto {
-  height: auto;
+.h-36 {
+  height: 9rem;
+}
+
+.h-full {
+  height: 100%;
 }
 
 .w-fit {
@@ -631,6 +631,14 @@ html {
 
 .overflow-hidden {
   overflow: hidden;
+}
+
+.overflow-y-auto {
+  overflow-y: auto;
+}
+
+.overflow-y-scroll {
+  overflow-y: scroll;
 }
 
 .rounded-md {

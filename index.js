@@ -42,7 +42,7 @@ io.on("connection", (socket) => {
     socket.emit("response", "Joined with username " + username);
     socket.emit(
       "chat message",
-      `Hello ${username}! Users online: ${getUserList()}`
+      `Tervetuloa ${username}! läsnäolijat: ${getUserList()}`
     );
   });
 
