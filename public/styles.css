@@ -594,7 +594,21 @@ html{
 .hover\:opacity-75:hover{
   opacity: 0.75;
 }
+@media (min-width: 768px){
+  .md\:mx-12{
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
+  .md\:my-12{
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+}
 @media (min-width: 1024px){
+  .lg\:mx-24{
+    margin-left: 6rem;
+    margin-right: 6rem;
+  }
   .lg\:h-96{
     height: 24rem;
   }
@@ -609,5 +623,11 @@ html{
   }
   .lg\:justify-center{
     justify-content: center;
+  }
+}
+@media (min-width: 1280px){
+  .xl\:mx-96{
+    margin-left: 24rem;
+    margin-right: 24rem;
   }
 }
