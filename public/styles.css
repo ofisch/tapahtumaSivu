@@ -449,6 +449,9 @@ html{
 .aspect-video{
   aspect-ratio: 16 / 9;
 }
+.h-2\/5{
+  height: 40%;
+}
 .h-20{
   height: 5rem;
 }
@@ -467,9 +470,6 @@ html{
 .w-fit{
   width: -moz-fit-content;
   width: fit-content;
-}
-.w-full{
-  width: 100%;
 }
 .flex-auto{
   flex: 1 1 auto;
@@ -595,20 +595,35 @@ html{
   opacity: 0.75;
 }
 @media (min-width: 768px){
+  .md\:m-auto{
+    margin: auto;
+  }
   .md\:mx-12{
     margin-left: 3rem;
     margin-right: 3rem;
+  }
+  .md\:mx-3{
+    margin-left: 0.75rem;
+    margin-right: 0.75rem;
   }
   .md\:my-12{
     margin-top: 3rem;
     margin-bottom: 3rem;
   }
+  .md\:ml-0{
+    margin-left: 0px;
+  }
+  .md\:mr-3{
+    margin-right: 0.75rem;
+  }
+  .md\:h-1\/4{
+    height: 25%;
+  }
+  .md\:w-4\/5{
+    width: 80%;
+  }
 }
 @media (min-width: 1024px){
-  .lg\:mx-24{
-    margin-left: 6rem;
-    margin-right: 6rem;
-  }
   .lg\:h-96{
     height: 24rem;
   }
@@ -626,8 +641,7 @@ html{
   }
 }
 @media (min-width: 1280px){
-  .xl\:mx-96{
-    margin-left: 24rem;
-    margin-right: 24rem;
+  .xl\:w-3\/5{
+    width: 60%;
   }
 }
